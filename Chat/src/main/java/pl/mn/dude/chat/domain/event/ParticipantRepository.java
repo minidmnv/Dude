@@ -1,6 +1,7 @@
 package pl.mn.dude.chat.domain.event;
 
 import java.util.Map;
+import java.util.Optional;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class ParticipantRepository {
@@ -11,8 +12,8 @@ public class ParticipantRepository {
         activeSessions.put(sessionId, event);
     }
 
-    public LoginEvent getParticipant(String sessionId) {
-        return activeSessions.get(sessionId);
+    public Optional<LoginEvent> getParticipant(String sessionId) {
+        return Optional.ofNullable(activeSessions.get(sessionId));
     }
 
     public void removeParticipant(String sessionId) {

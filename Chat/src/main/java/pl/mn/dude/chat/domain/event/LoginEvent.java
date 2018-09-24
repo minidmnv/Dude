@@ -1,16 +1,14 @@
 package pl.mn.dude.chat.domain.event;
 
-import pl.mn.dude.chat.domain.model.Participant;
-
 import java.time.LocalDateTime;
 
 public class LoginEvent {
 
-    public final Participant participant;
+    public final String username;
     public final LocalDateTime time;
 
-    public LoginEvent() {
-        participant = null;
-        time = null;
+    public LoginEvent(String username, LocalDateTime time) {
+        this.username = username;
+        this.time = time;
     }
 }
