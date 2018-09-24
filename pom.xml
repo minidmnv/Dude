@@ -14,5 +14,6 @@
 
     <properties>
         <netty-socketio.version>1.7.15</netty-socketio.version>
+        <spring-boot.version>2.0.0.BUILD-SNAPSHOT</spring-boot.version>
     </properties>
 </project>
