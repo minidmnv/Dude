@@ -2,12 +2,12 @@ package pl.mn.dude.chat;
 
 import java.util.UUID;
 
-public class User {
+public class Participant {
 
-    private final UUID id;
-    private final String name;
+    public final UUID id;
+    public final String name;
 
-    public User() {
+    public Participant() {
         id = UUID.randomUUID();
         name = null;
     }

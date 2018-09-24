@@ -4,13 +4,15 @@ import java.time.LocalDateTime;
 
 public class Message {
 
-    private final User user;
-    private final String message;
-    private final LocalDateTime time;
+    public final Participant sender;
+    public final Addressee addressee;
+    public final String message;
+    public final LocalDateTime time;
 
     public Message() {
-        user = null;
+        sender = null;
         message = null;
         time = null;
+        addressee = null;
     }
 }
