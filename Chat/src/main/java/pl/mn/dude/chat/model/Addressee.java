@@ -1,4 +1,4 @@
-package pl.mn.dude.chat;
+package pl.mn.dude.chat.model;
 
 import java.util.Set;
 

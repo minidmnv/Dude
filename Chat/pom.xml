@@ -23,6 +23,16 @@
             <artifactId>spring-boot-starter-web</artifactId>
             <version>${spring-boot.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-websocket</artifactId>
+            <version>${spring-boot.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.rethinkdb</groupId>
+            <artifactId>rethinkdb-driver</artifactId>
+            <version>${rethinkdb-driver.version}</version>
+        </dependency>
     </dependencies>
 
 </project>
