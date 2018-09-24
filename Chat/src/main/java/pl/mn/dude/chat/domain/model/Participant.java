@@ -1,4 +1,4 @@
-package pl.mn.dude.chat.model;
+package pl.mn.dude.chat.domain.model;
 
 import java.util.UUID;
 
