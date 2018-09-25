@@ -4,6 +4,8 @@ import com.rethinkdb.RethinkDB;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.messaging.handler.annotation.MessageMapping;
+import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.messaging.simp.annotation.SubscribeMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -13,6 +15,7 @@ import pl.mn.dude.chat.domain.event.LoginEvent;
 import pl.mn.dude.chat.infrastructure.database.RethinkDbConnectionFactory;
 import pl.mn.dude.chat.domain.model.Message;
 
+import java.security.Principal;
 import java.time.LocalDateTime;
 import java.util.Set;
 
@@ -32,8 +35,8 @@ public class ChatController {
         return null;
     }
 
-    @PostMapping
-    public Message sendMessage(@RequestBody Message message) {
+    @MessageMapping("/chat.message")
+    public Message sendMessage(@Payload Message message, Principal principal) {
         message = new Message.Builder(message).withServerTime(LocalDateTime.now()).build();
 
         return message;
