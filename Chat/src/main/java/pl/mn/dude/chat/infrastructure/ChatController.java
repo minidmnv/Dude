@@ -7,13 +7,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.messaging.simp.annotation.SubscribeMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import pl.mn.dude.chat.domain.event.LoginEvent;
-import pl.mn.dude.chat.infrastructure.database.RethinkDbConnectionFactory;
 import pl.mn.dude.chat.domain.model.Message;
+import pl.mn.dude.chat.infrastructure.database.RethinkDbConnectionFactory;
 
 import java.security.Principal;
 import java.time.LocalDateTime;
