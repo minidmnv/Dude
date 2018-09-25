@@ -28,7 +28,7 @@ public class ChatConfig {
 
     @Bean
     @Description("Przetrzymuje aktywnych uzytkownikow")
-    private ParticipantRepository participantRepository() {
+    public ParticipantRepository participantRepository() {
         return new ParticipantRepository();
     }
 

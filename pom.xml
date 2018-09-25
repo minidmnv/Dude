@@ -18,7 +18,21 @@
         <rethinkdb-driver.version>2.3.3</rethinkdb-driver.version>
         <maven-compiler-plugin.version>3.8.0</maven-compiler-plugin.version>
         <spring-security.version>5.0.3.RELEASE</spring-security.version>
+        <jackson.version>2.9.6</jackson.version>
     </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+    </dependencies>
 
     <build>
         <plugins>
